@@ -1,18 +1,9 @@
-import json
-import os
-
 from aiohttp import web, streamer
 from icecream import ic
 from file_manager import FileManager
-import tempfile
 
 routes = web.RouteTableDef()
 file = FileManager()
-
-@routes.get('/')
-async def hello(request):
-    ic(request)
-    return web.Response(text="Hello world")
 
 
 @routes.post('/upload')
