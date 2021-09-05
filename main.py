@@ -9,7 +9,7 @@ file = FileManager()
 @routes.post('/upload')
 async def upload_file(request):
     """
-    curl -F "file=@{path_to_file}" http://127.0.0.1:80/upload
+    curl -F "file=@{path_to_file}" http://127.0.0.1:4040/upload
     :param request:
     :return:
     """
@@ -22,7 +22,7 @@ async def upload_file(request):
 @routes.get('/{hash_id}')
 async def download_file(request):
     """
-    curl http://127.0.0.1:80/{hashfilename} --output {file.txt}
+    curl http://127.0.0.1:4040/{hashfilename} --output {file.txt}
     :param request:
     :return:
     """
@@ -37,7 +37,7 @@ async def download_file(request):
 @routes.delete('/{hash_id}')
 async def delete_file(request):
     """
-    curl -X DELETE http://127.0.0.1:80/{hashfilename}
+    curl -X DELETE http://127.0.0.1:4040/{hashfilename}
     :param request:
     :return:
     """
