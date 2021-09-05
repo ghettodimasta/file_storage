@@ -8,4 +8,4 @@
 2. To download use:
 `curl http://127.0.0.1:4040/{hashfilename.format} --output {file.format}`
 3. To delete use:
-`curl -X DELETE http://127.0.0.1:4040/{hashfilename}`
+`curl -X DELETE http://127.0.0.1:4040/{hashfilename.format}`
